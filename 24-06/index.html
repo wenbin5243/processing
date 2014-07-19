@@ -11,7 +11,9 @@ void setup(){
   size(100,100);
 }
 void draw(){
-  point(mouseX,mouseY);
+  for(int i=-14;i<=14;i+=2){
+  	point(mouseX+i,mouseY);
+  }
 }
 </script>
 <canvas id="mycanvas"></canvas>

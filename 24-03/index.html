@@ -11,7 +11,9 @@ void setup(){
   size(100,100);
 }
 void draw(){
-  point(mouseX,mouseY);
+  if(mousePressed==true){
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  }
 }
 </script>
 <canvas id="mycanvas"></canvas>
