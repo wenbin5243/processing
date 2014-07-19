@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+void setup(){
+  size(100,100);
+  noStroke();
+  fill(0);
+}
+void draw(){
+  background(204);
+  if((mouseX>40)&&(mouseX<80)&&(mouseY>20)&&(mouseY<80)){
+    fill(255);
+  }else{
+    fill(0);
+  }
+  rect(40,20,40,60);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

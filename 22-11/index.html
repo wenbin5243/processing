@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+int x=63;
+int y=50;
+int r=30;
+int n=6;
+int rs=22;
+void setup(){
+  size(100,100);
+  noStroke();
+  smooth();
+  noLoop();
+  randomSeed(rs);
+}
+void draw(){
+  drawCircle(x,y,r,n);
+}
+void drawCircle(int x,int y,int radius,int num){
+  float value=126*num/6.0;
+  fill(value,153);
+  ellipse(x,y,radius*2,radius*2);
+  if(num>1){
+    num=num-1;
+    int branches=int(random(2,6));
+    for (int i=0;i<branches;i++){
+      float a=random(0, TWO_PI);
+      float newx=x+cos(a)*6.0*num;
+      float newy=y+sin(a)*6.0*num;
+      drawCircle(newx,newy,radius/2,num);
+    }
+  }
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

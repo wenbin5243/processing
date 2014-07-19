@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+void setup(){
+  size(100,100);
+  smooth();
+  noStroke();
+}
+void draw(){
+  float x=mouseX;
+  float y=mouseY;
+  float ix=width-mouseX;
+  float iy=height-mouseY;
+  background(126);
+  fill(255,150);
+  ellipse(x,height/2,y,y);
+  fill(0,159);
+  ellipse(ix,height/2,iy,iy);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>
