@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+float speed=0.0;
+float easing=0.05;
+void setup(){
+  size(100,100);
+  noStroke();
+  smooth();
+}
+void draw(){
+  background(0);
+  float target=dist(mouseX,mouseY,pmouseX,pmouseY);
+  speed+=(target-speed)*easing;
+  rect(0,33,target,17);
+  rect(0,50,speed,17);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

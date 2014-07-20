@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+float angle=0;
+void setup(){
+	size(100,100);
+	smooth();
+	strokeWeight(8);
+}
+void draw(){
+	background(204);
+	if(keyPressed==true){
+		if((key>=32)&&(key<=126)){
+			angle=map(key,32,126,0,TWO_PI);
+		}
+	}
+	arc(50,50,66,66,angle-PI/6,angle+PI/6);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

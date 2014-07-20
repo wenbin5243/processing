@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+void setup(){
+  size(100,100);
+  stroke(255);
+}
+void draw(){
+  background(0);
+  float s=map(second(),0,60,0,100);
+  float m=map(minute(),0,60,0,100);
+  float h=map(hour(),0,24,0,100);
+  line(s,0,s,33);
+  line(m,34,m,66);
+  line(h,67,h,100);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+int y=35;
+void setup(){
+	size(100,100);
+}
+void draw(){
+	background(204);
+	line(10,50,90,50);
+	if(key==CODED){
+		if(keyCode==UP){
+			y=20;
+		}else if(keyCode==DOWN){
+			y=50;
+		}
+	}else{
+		y=35;
+	}
+	rect(25,y,50,50);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

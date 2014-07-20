@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+void setup(){
+  size(100,100);
+  noStroke();
+  smooth();
+}
+void draw(){
+  background(0);
+  float speed=dist(mouseX,mouseY,pmouseX,pmouseY);
+  float diameter=speed*3.0;
+  ellipse(50,50,diameter,diameter);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

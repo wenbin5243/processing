@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+float x=50;
+float y1=33;
+float y2=66;
+void setup(){
+  size(100,100);
+  noStroke();
+  smooth();
+}
+void draw(){
+  background(0);
+  float angle=atan2(mouseY-y1,mouseX-x);
+  pushMatrix();
+  translate(x,y1);
+  rotate(angle);
+  triangle(-20,-8,20,0,-20,8);
+  popMatrix();
+  pushMatrix();
+  float angle2=atan2(mouseY-y2,mouseX-x);
+  translate(x,y2);
+  rotate(angle2);
+  triangle(-20,-8,20,0,-20,8);
+  popMatrix();
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

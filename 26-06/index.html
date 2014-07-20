@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+boolean drawT=false;
+void setup(){
+	size(100,100);
+	noStroke();
+}
+void draw(){
+	background(204);
+	if(drawT==true){
+		rect(20,20,60,20);
+		rect(39,40,22,45);
+	}
+}
+void keyPressed(){
+	if((key=='T')||(key=='t')){
+		drawT=true;
+	}
+}
+void keyReleased(){
+	drawT=false;
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

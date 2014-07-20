@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+void setup(){
+  size(100,100);
+  frameRate(15);
+  fill(0);
+}
+void draw(){
+  float angle=atan2(mouseY,mouseX);
+  float deg=degrees(angle);
+  println(deg);
+  background(204);
+  ellipse(mouseX,mouseY,8,8);
+  rotate(angle);
+  line(0,0,150,0);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>
