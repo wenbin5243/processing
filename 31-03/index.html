@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+float x=50.0;
+float y=50.0;
+float speedX=1.0;
+float speedY=0.5;
+float radius=15.0;
+int directionX=1;
+int directionY=-1;
+void setup(){
+	size(100,100);
+	smooth();
+	noStroke();
+	ellipseMode(RADIUS);
+}
+void draw(){
+	fill(0,12);
+	rect(0,0,width,height);
+	fill(255);
+	ellipse(x,y,radius,radius);
+	x+=speedX*directionX;
+	if((x>width-radius)||(x<radius)){
+		directionX=-directionX;
+	}
+	y+=speedY*directionY;
+	if((y>height-radius)||(y<radius)){
+		directionY=-directionY;
+	}
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

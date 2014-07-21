@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+float x=50.0;
+float y=80.0;
+
+void setup(){
+	size(100,100);
+	randomSeed(0);
+	background(0);
+	stroke(255);
+}
+void draw(){
+	x+=random(-2,2);
+	y+=random(-2,2);
+	point(x,y);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>
