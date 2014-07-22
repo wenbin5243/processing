@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+int[][] points={{50,18},{61,37},{83,43},{69,60},{71,82},{50,73},{29,82},{31,60},{17,43},{39,37}};
+void setup(){
+	size(100,100);
+	fill(0);
+	smooth();
+}
+void draw(){
+	background(204);
+	translate(mouseX-50,mouseY-50);
+	beginShape();
+	for(int i=0;i<points.length;i++){
+		vertex(points[i][0],points[i][1]);
+	}
+	endShape();
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

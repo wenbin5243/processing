@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+void setup(){
+	size(100,100);
+	textAlign(CENTER);
+	fill(0);
+}
+void draw(){
+	background(204);
+	text("avoid",width-mouseX,height-mouseY);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+PImage img=loadImage("../img.jpg");
+image(img,0,0);
+copy(0,0,100,50,0,50,100,50);
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

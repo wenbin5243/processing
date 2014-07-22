@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+String[] trees={"ash","oak","fig"};
+trees=shorten(trees);
+print(trees);
+println();
+trees=shorten(trees);
+print(trees);	
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

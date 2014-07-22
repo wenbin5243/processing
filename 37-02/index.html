@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+float x=33;
+float y=60;
+void setup(){
+	size(100,100);
+	noStroke;
+}
+void draw(){
+	fill(204,120);
+	rect(0,0,width,height);
+	fill(0);
+	if((mouseX>=x)&&(mouseX<=x+55)&&(mouseY>=y-24)&&(mouseY<=y)){
+		x+=random(-5,5);
+		y+=random(-5,5);
+	}
+	text("tickle",x,y);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

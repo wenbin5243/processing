@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+PImage arch;
+void setup(){
+	size(100,100);
+	arch=loadImage("../img.jpg");
+}
+void draw(){
+	background(204);
+	int mx=constrain(mouseX,0,99);
+	int my=constrain(mouseY,0,99);
+	arch.loadPixels();
+	arch.pixels[my*width+mx]=color(0);
+	arch.updatePixels();
+	image(arch,50,0);
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+color g1=color(102);
+color g2=color(51);
+color g3=blendColor(g1,g2,MULTIPLY);
+noStroke();
+fill(g1);
+rect(50,0,50,100);
+fill(g2);
+rect(20,25,30,50);
+fill(g3);
+rect(50,25,20,50);
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

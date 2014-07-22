@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+int[] x={50,61,83,69,71,50,29,31,17,39,50};
+int[] y={18,37,43,60,82,73,82,60,43,37,18};
+
+beginShape();
+for(int i=0;i<x.length;i++){
+	vertex(x[i],y[i]);
+}
+endShape();
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+String[] words={"Three","strikes","and","you're","out..."," "};
+int whichword=0;
+
+void setup(){
+	size(100,100);
+	textAlign(CENTER);
+	frameRate(4);
+}
+void draw(){
+	background(204);
+	whichword++;
+	if(whichword==words.length){
+		whichword=0;
+	}
+	text(words[whichword],width/2,55);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

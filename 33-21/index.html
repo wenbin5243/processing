@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+float[] data={19.0,40.0,75.0,76.0,90.0};
+void setup(){
+	halve(data);
+	println(data[0]);
+	println(data[1]);
+	println(data[2]);
+	println(data[3]);
+	println(data[4]);
+}
+void halve(float[] d){
+	for(int i=0;i<d.length;i++){
+		d[i]=d[i]/2.0;
+	}
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

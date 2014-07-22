@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+strokeWeight(8);
+line(0,0,width,height);
+line(0,height,width,0);
+PImage slice=get(0,0,20,100);
+set(18,0,slice);
+set(50,0,slice);
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

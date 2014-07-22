@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+String[] north={"OH","IN","MI"};
+String[] south={"GA","FL","NC"};
+arraycopy(north,south);
+print(south);
+println();
+String[] east={"MA","NY","RI"};
+String[] west=new String[east.length];
+arraycopy(east,west);
+print(west);
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

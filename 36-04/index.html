@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+int opacity=0;
+int direction=1;
+
+void setup(){
+	size(100,100);
+}
+void draw(){
+	background(204);
+	opacity+=2*direction;
+	if((opacity<0)||(opacity>255)){
+		direction=-direction;
+	}
+	fill(0,opacity);
+	text("fade",4,60);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

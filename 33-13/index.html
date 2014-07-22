@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+int numlines=12;
+float[] x=new float[numlines];
+float[] speed=new float[numlines];
+float offset=8;
+void setup(){
+	size(100,100);
+	smooth();
+	strokeWeight(10);
+	for(int i=0;i<numlines;i++){
+		x[i]=i;
+		speed[i]=0.1+(i/offset);
+	}
+}
+void draw(){
+	background(204);
+	for(int i=0;i<x.length;i++){
+		x[i]+=speed[i];
+		if(x[i]>(width+offset)){
+			x[i]=-offset*2;
+		}
+		float y=i*offset;
+		line(x[i],y,x[i]+offset,y+offset);
+	}
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

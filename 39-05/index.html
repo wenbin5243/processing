@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+background(0);
+stroke(153);
+strokeWeight(24);
+smooth();
+line(44,0,24,80);
+line(0,24,80,44);
+blend(0,0,100,100,16,0,100,100,ADD);
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

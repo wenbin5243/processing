@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+String s="VERTIGO";
+float angle=0.0;
+
+void setup(){
+	size(100,100);
+	fill(0);
+}
+void draw(){
+	background(204);
+	angle+=0.02;
+	pushMatrix();
+	translate(33,50);
+	scale((cos(angle/4.0)+1.2)*2.0);
+	rotate(angle);
+	text(s,0,0);
+	popMatrix();
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+for(int i=0;i<55;i++){
+	for(int j=0;j<55;j++){
+		color c=color((i+j)*1.8);
+		set(30+i,20+j,c);
+	}
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>

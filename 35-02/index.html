@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>processing</title>
+</head>
+<body>
+<script src="../processing.min.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+smooth();
+strokeWeight(8);
+line(0,0,width,height);
+line(0,height,width,0);
+noStroke();
+ellipse(18,50,16,16);
+Pimage cross=get();
+image(cross,42,30,40,40);
+</script>
+<canvas id="mycanvas"></canvas>
+</body>
+</html>
