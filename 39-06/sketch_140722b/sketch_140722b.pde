@@ -1,4 +1,4 @@
-PImage img=loadImage("../img.jpg");
+PImage img=loadImage("../../img.jpg");
 background(0);
 stroke(255);
 strokeWeight(24);

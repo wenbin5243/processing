@@ -7,7 +7,6 @@
 <body>
 <script src="../processing.min.js"></script>
 <script type="text/processing" data-processing-target="mycanvas">
-PFont font;
 String letters="";
 void setup(){
 	size(100,100);
@@ -25,7 +24,7 @@ void keyPressed(){
 		if(letters.length()>0){
 			letters=letters.substring(0,letters.length()-1);
 		}
-	}else if(textWidth(letters+key)<width){
+	}else if(textWidth(letters+key) < width){
 		letters=letters+key;
 	}
 }
