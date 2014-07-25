@@ -29,4 +29,5 @@ void draw(){
     vertex(x,-100,z,u,0);
     vertex(x,100,z,u,img.height);
   }
+  endShape();
 }
