@@ -6,19 +6,6 @@
 </head>
 <body>
 <script src="../processing.min.js"></script>
-<script type="text/processing" data-processing-target="mycanvas">
-void setup(){
-	size(100,100);
-}
-void draw(){
-	background(204);
-	line(0,0,mouseX,height);
-	line(width,0,0,mouseY);
-}
-void mousePressed(){
-	save("line.jpg");
-}
-</script>
-<canvas id="mycanvas"></canvas>
+<canvas data-processing-sources="processing/processing.pde"></canvas>
 </body>
 </html>

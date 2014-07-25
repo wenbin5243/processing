@@ -23,7 +23,7 @@ class Button{
   int size;
   color baseGray;
   color overGray;
-  color pressGary;
+  color pressGray;
   boolean over=false;
   boolean pressed=false;
 

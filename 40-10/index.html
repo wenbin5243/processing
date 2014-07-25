@@ -6,17 +6,6 @@
 </head>
 <body>
 <script src="../processing.min.js"></script>
-<script type="text/processing" data-processing-target="mycanvas">
-size(400,300);
-PImage arch=loadImage("../img.jpg");
-int count=arch.width*arch.height;
-arch.loadPixels();
-loadPixels();
-for(int i=0;i<count;i++){
-	pixels[i]=arch.pixels[i/2];
-}
-updatePixels();
-</script>
-<canvas id="mycanvas"></canvas>
+<canvas data-processing-sources="processing/processing.pde"></canvas>
 </body>
 </html>

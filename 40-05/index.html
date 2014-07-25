@@ -6,23 +6,6 @@
 </head>
 <body>
 <script src="../processing.min.js"></script>
-<script type="text/processing" data-processing-target="mycanvas">
-Pimage arch;
-void setup(){
-	size(100,100);
-	noStroke();
-	arch=loadImage("../img.jpg");
-}
-void draw(){
-	background(arch);
-	int mx=constrain(mouseX,0,99);
-	int my=constrain(mouseY,0,99);
-	loadPixels();
-	color c=pixels[my*width+mx];
-	fill(c);
-	rect(20,20,60,60);
-}
-</script>
-<canvas id="mycanvas"></canvas>
+<canvas data-processing-sources="processing/processing.pde"></canvas>
 </body>
 </html>

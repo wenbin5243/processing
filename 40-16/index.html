@@ -6,31 +6,6 @@
 </head>
 <body>
 <script src="../processing.min.js"></script>
-<script type="text/processing" data-processing-target="mycanvas">
-PImage arch;
-
-void setup(){
-  size(100,100);
-  smooth();
-  arch=loadImage("../img.jpg");
-  arch.loadPixels();
-}
-
-void draw(){
-  background(204);
-  int mx=constrain(mouseX,0,arch.width-1);
-  int offset=mx*arch.width;
-  beginShape(LINES);
-  for(int i=0;i<arch.width;i+=2){
-  	float r1=blue(arch.pixels[offset+i]);
-  	float r2=blue(arch.pixels[offset+i+1]);
-  	float vx=map(r1,0,255,0,height);
-  	float vy=map(r2,0,255,0,height);
-  	vertex(vx,vy);
-  }
-  endShape();
-}
-</script>
-<canvas id="mycanvas"></canvas>
+<canvas data-processing-sources="processing/processing.pde"></canvas>
 </body>
 </html>

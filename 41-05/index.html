@@ -6,23 +6,6 @@
 </head>
 <body>
 <script src="../processing.min.js"></script>
-<script type="text/processing" data-processing-target="mycanvas">
-float x=33;
-float numFrames=50;
-void setup(){
-  size(100,100);
-  smooth();
-  noStroke();
-}
-void draw(){
-  background(0);
-  x+=random(-2,2);
-  ellipse(x,50,40,40);
-  if(frameCount<=numFrames){
-    saveFrame("circles-####.jpg");
-  }
-}
-</script>
-<canvas id="mycanvas"></canvas>
+<canvas data-processing-sources="processing/processing.pde"></canvas>
 </body>
 </html>

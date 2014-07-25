@@ -6,11 +6,6 @@
 </head>
 <body>
 <script src="../processing.min.js"></script>
-<script type="text/processing" data-processing-target="mycanvas">
-PImage img=loadImage("../img.jpg");
-img.copy(50,0,50,100,0,0,50,100);
-image(img,0,0);
-</script>
-<canvas id="mycanvas"></canvas>
+<canvas data-processing-sources="processing/processing.pde"></canvas>
 </body>
 </html>
