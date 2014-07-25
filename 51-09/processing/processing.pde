@@ -30,11 +30,4 @@ void draw(){
     vertex(x,100,z,u,img.height);
   }
   endShape();
-  beginShape(QUADS);
-  texture(img);
-  vertex(0,-100,0,0,0);
-  vertex(100,-100,0,100,0);
-  vertex(100,100,0,100,100);
-  vertex(0,100,0,0,100);
-  endShape();
 }
