@@ -24,45 +24,51 @@ class Particle{
 }
 
 class LimiteParticle extends Particle{
-  float originX,originY;
+  float friction=0.99;
 
-  GenParticle(int xIn,int yIn,float vxIn,float vyIn,float r,float ox,float oy){
-    super(xIn,yIn,vxIn,vyIn,r);
-    originX=ox;
-    originY=oy;
+  LimiteParticle(int ix,int iy,float ivx,float ivy,float ir){
+    super(ix,iy,ivx,ivy,ir);
   }
 
-  void regenerate(){
-    if((x>width+radius)||(x<-radius)||(y>height+radius)||(y<-radius)){
-      x=originX;
-      y=originY;
-      vx=random(-1.0,1.0);
-      vy=random(-4.0,-2.0);
+  void update(){
+    vy*=friction;
+    vx*=friction;
+    super.update();
+    limit();
+  }
+  void limit(){
+    if(y>height-radius){
+      vy=-vy;
+      y=constrain(y,-height*height,height-radius);
+    }
+    if((x<radius)||(x>width-radius)){
+      vx=-vx;
+      x=constrain(x, radius, width-radius);
     }
   }
 }
 
-int numParticles=200;
-GenParticle[] p=new GenParticle[numParticles];
+int num=80;
+LimiteParticle[] p=new LimiteParticle[num];
+float radius=1.2;
 
 void setup(){
   size(100,100);
   noStroke();
   smooth();
   for(int i=0;i<p.length;i++){
-    float velX=random(-1,1);
+    float velX=random(-2,2);
     float velY=-i;
-    p[i]=new GenParticle(width/2,height/2,velX,velY,5.0,width/2,height/2);
+    p[i]=new LimiteParticle(width/2,height/2,velX,velY,2.2);
   }
 }
 
 void draw(){
-  fill(0,36);
+  fill(0,24);
   rect(0,0,width,height);
-  fill(255,60);
+  fill(255);
   for(int i=0;i<p.length;i++){
     p[i].update();
-    p[i].regenerate();
     p[i].display();
   }
 }
