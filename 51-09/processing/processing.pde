@@ -6,7 +6,7 @@ PImage img;
 
 void setup(){
   size(400,400,P3D);
-  img=loadImage("../../img.jpg");
+  img=loadImage("../img.jpg");
   float angle=270.0/tubeRes;
   for(int i=0;i<tubeRes;i++){
     tubeX[i]=cos(radians(i*angle));
