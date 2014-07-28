@@ -1,0 +1,10 @@
+boolean b = true;
+println(b);
+println(!b);
+b=!b;
+println(b);
+println(!b);
+println(5>3);
+println(!(5>3));
+int x=5;
+println(!x);
