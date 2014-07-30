@@ -1,0 +1,12 @@
+size(100,100);
+scale(width/2,height/2);
+translate(1.0, 1.0);
+strokeWeight(1.0/width);
+line(-1,0,1,0);
+line(0,-1,0,1);
+smooth();
+noStroke();
+fill(255,204);
+ellipse(0,0,0.9,0.9);
+ellipse(-1.0,1.0,0.9,0.9);
+ellipse(1.0,-1.0,0.9,0.9);

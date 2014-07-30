@@ -1,0 +1,11 @@
+size(100,100);
+translate(0,height);
+scale(1.0,-1.0);
+line(0,1,width,1);
+line(0,1,0,height);
+smooth();
+noStroke();
+fill(255,204);
+ellipse(0,0,45,45);
+ellipse(width/2,height/2,45,45);
+ellipse(width,height,45,45);
